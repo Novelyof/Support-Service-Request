@@ -1,0 +1,99 @@
+.body{
+  font-family: 'Kalam'; /* Menambahkan font Monstreat ke seluruh halaman */
+  margin: 0; /* Reset margin agar tidak ada padding atau margin bawaan */
+  padding: 0;
+  background-image: url('/Admin.png'); /* Menambahkan background image ke seluruh halaman */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pageContainer {
+    font-family: 'Monstreat';
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px; /* Untuk memberi sedikit ruang di sisi kiri */
+    box-sizing: border-box;
+  }
+  
+  .loginContainer {
+    padding: 20px;
+    display: flex;
+  }
+  
+  .loginForm {
+    width: 300px;
+  }
+  
+  /* Gaya teks */
+  .welcomeText {
+    text-align: center;
+    margin-bottom: 20%;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+  
+  .solutionText {
+    margin-top: 20%;
+    color: #007bff;
+  }
+  
+  .button {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  .imageColumn {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .imageColumn img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Desktop styles */
+.pageContainer {
+  padding-left: 20px; /* Sedikit ruang di sisi kiri */
+}
+
+.loginForm {
+  width: 300px;
+}
+
+/* Tablet styles */
+@media screen and (max-width: 768px) {
+  .loginForm {
+    width: 70%; /* Ubah lebar loginForm untuk tablet */
+    margin: 0 auto; /* Posisi tengah pada tablet */
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 480px) {
+  .loginForm {
+    width: 90%; /* Ubah lebar loginForm untuk mobile */
+  }
+
+  .welcomeText {
+    font-size: 18px; /* Ukuran font lebih kecil untuk mobile */
+    margin-bottom: 10px;
+  }
+}

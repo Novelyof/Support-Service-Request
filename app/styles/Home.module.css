@@ -1,0 +1,210 @@
+@font-face {
+  font-family: 'Kalam';
+  src: url('/Kalam-Regular.ttf') format('truetype'); /* Sesuaikan nama dan alamat file font */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Container utama */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Menggunakan tinggi layar penuh */
+  display: flex;
+  flex-direction: column;
+}
+
+.backgroundImage {
+  background-image: url('/backgrounHome.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+
+
+.boxContainer {
+  width: 80%;
+  height: 80px;
+  margin: 0 auto; /* Untuk memposisikan di tengah */
+  text-align: center;
+  margin-top: 50px; /* Sesuaikan margin atas */
+  margin-bottom: 30px; /* Sesuaikan margin bawah */
+  background-color: #ACD4F7; /* Warna latar belakang kotak */
+  padding: 20px;
+  border-radius: 20px; /* Untuk sudut kotak yang melengkung */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  color: #ffffff; /* Warna teks di dalam kotak */
+}
+
+/* Styling untuk teks di dalam kotak */
+.boxText {
+  font-family: 'kalam', sans-serif;
+  font-size: 18px;
+  line-height: 1.0; /* Jarak antar baris */
+  font-weight: 800;
+}
+
+.imageGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Atur margin atas */
+  gap: 50px; /* Jarak antar item */
+  /* Styling tambahan sesuai kebutuhan */
+}
+
+/* Styling untuk setiap item gambar */
+.imageItem {
+  height: 270px;
+  width: 250px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #ACD4F7;
+  border-radius: 20px;
+  /* Styling tambahan sesuai kebutuhan */
+}
+
+/* Styling untuk gambar dalam setiap item */
+.imageItem img {
+  width: 210px; /* Lebar gambar */
+  height: 210px; /* Tinggi gambar */
+  border-radius: 50%; /* Untuk gambar bundar */
+  margin-top: 20px; /* Atur margin atas */
+  text-decoration: none;
+  /* Styling tambahan sesuai kebutuhan */
+}
+
+/* Styling untuk teks di setiap item */
+.imageItem p {
+  font-size: 20px;
+  font-family: 'kalam', sans-serif;
+  margin-top: 1px; /* Atur margin atas teks */
+  color: white;
+  text-decoration: none; /* Menghilangkan garis bawah */
+  /* Styling tambahan sesuai kebutuhan */
+}
+
+/* Styling hover untuk item gambar */
+.imageItem:hover {
+  transform: scale(1.1); /* Efek scaling ketika dihover */
+}
+
+/* Tabel */
+.tableContainer {
+  text-align: center;
+  margin-top: 20px; /* Atur margin atas */
+}
+
+/* Styling untuk tabel */
+.table {
+  width: 80%;
+  margin: 50px auto; /* Jarak atas dan bawah */
+  border-spacing: 0 10px;
+  position: relative;
+}
+
+/* Styling untuk bagian head tabel */
+.table thead {
+  background-color: #ACD4F7; /* Warna latar belakang untuk thead */
+  color: white; /* Warna teks untuk thead */
+}
+
+/* Styling untuk bagian body tabel */
+.table tbody {
+  background-color: white; /* Warna latar belakang untuk tbody */
+  color: black; /* Warna teks untuk tbody */
+}
+
+/* Styling untuk sel dalam tabel */
+.table td,
+.table th {
+  font-family: 'kalam', sans-serif;
+  padding: 12px; /* Jarak di dalam sel */
+  text-align: center;
+  border: none; /* Hapus border pada sel */
+}
+
+/* Styling untuk setiap baris dalam tbody */
+.table tbody tr {
+  margin-top: 10px; /* Jarak atas */
+  margin-bottom: 10px; /* Jarak bawah */
+}
+
+.expandRow {
+  font-family: 'kalam', sans-serif;
+  text-align: right; /* Posisi teks di tengah */
+  margin-top: 5px; /* Jarak atas dari tabel */
+  margin-left: auto; /* Mengatur posisi horizontal ke kanan */
+  margin-right: auto; /* Mengatur posisi horizontal ke kiri */
+  display: block; /* Mengubahnya menjadi blok element */
+  width: fit-content; /* Menyesuaikan lebar dengan konten */
+  background-color: #ACD4F7;
+  cursor: pointer;
+}
+
+/* Efek hover pada teks Expand */
+.expandRow:hover {
+  transform: scale(1.1);
+}
+
+
+/* Styling lainnya tetap sama seperti sebelumnya */
+
+/* Untuk layar tablet */
+@media screen and (max-width: 768px) {
+  .imageGrid {
+    flex-direction: column; /* Mengubah grid horizontal menjadi vertical */
+    align-items: center; /* Mengatur gambar agar berada di tengah pada mode vertikal */
+  }
+
+  /* Sesuaikan ukuran gambar untuk tablet */
+  .imageItem {
+    height: 200px;
+    width: 180px;
+    margin-bottom: 20px; /* Jarak antar item pada mode vertikal */
+  }
+
+  /* Sesuaikan ukuran font pada teks di dalam imageItem untuk tablet */
+  .imageItem p {
+    font-size: 16px;
+  }
+
+  /* Sesuaikan ukuran gambar pada imageItem untuk tablet */
+  .imageItem img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Untuk gambar bundar */
+  }
+}
+
+/* Untuk layar mobile */
+@media screen and (max-width: 480px) {
+  .imageGrid {
+    flex-direction: column; /* Mengubah grid horizontal menjadi vertical */
+    align-items: center; /* Mengatur gambar agar berada di tengah pada mode vertikal */
+  }
+
+  /* Sesuaikan ukuran gambar untuk mobile */
+  .imageItem {
+    height: 150px;
+    width: 130px;
+    margin-bottom: 15px; /* Jarak antar item pada mode vertikal */
+  }
+
+  /* Sesuaikan ukuran font pada teks di dalam imageItem untuk mobile */
+  .imageItem p {
+    font-size: 14px;
+  }
+
+  /* Sesuaikan ukuran gambar pada imageItem untuk mobile */
+  .imageItem img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Untuk gambar bundar */
+  }
+}
