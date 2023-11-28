@@ -1,7 +1,7 @@
-/* ... CSS sebelumnya ... */
-
+/* Gaya untuk backgroundImage */
 .backgroundImage {
-    background-image: url('/public/backgrounHome.png');
+    font-family: 'Kalam';
+    background-image: url('/backgrounHome.png');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -11,131 +11,133 @@
     opacity: 0.8;
 }
 
+/* Gaya untuk headerBox */
 .headerBox {
     display: flex;
-    width: 50%;
+    width: 1200px;
+    height: 80px;
     align-items: center;
     justify-content: flex-start;
     background-color: #ACD4F7;
-    padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 22px;
     margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 20px;
 }
 
-/* Styling untuk tombol kembali */
+/* Gaya untuk backButton */
 .backButton {
-    width: 130px;
-    height: 45px;
+    width: 200px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
     background-color: #73B9F6;
-    margin-right: 20px;
-    border-radius: 10px;
+    border-radius: 22px;
+    align-items: center;
 }
 
-/* Styling untuk tombol kembali */
+/* Gaya untuk backButton a */
 .backButton a {
     text-decoration: none;
     color: black;
+    font-weight: 1000;
+    font-size: 160%;
+}
+
+/* Gaya untuk headerText */
+.headerText {
+    font-size: 25px;
+    margin-left: 100px;
+}
+
+.imageContainer {
+    position: absolute;
+    top: 10px; /* Sesuaikan dengan jarak vertikal dari atas */
+    right: 10px; /* Sesuaikan dengan jarak horizontal dari kanan */
+}
+
+/*----------------------------------------*/
+.content {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    width: 1500px;
+    height: auto;
+    background-color: #73B9F6;
+}
+
+.container {
+    grid-column: 1;/* Menggunakan separuh dari lebar */
+    gap: 20px;
+}
+
+/*.container {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 22px;
+    padding: 20px;
+}*/
+
+.title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center; /* Untuk menengahkan judul */
+    margin-top: -30px; /* Sesuaikan dengan spasi yang diinginkan */
+    background-color: #fff; /* Membuat latar belakang agar judul terlihat di atas */
+    width: fit-content; /* Sesuaikan dengan lebar yang diinginkan */
+    padding: 0 10px; /* Sesuaikan padding jika diperlukan */
+}
+
+.columnsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Menggunakan grid 2 kolom */
+    gap: 10px; /* Jarak antara elemen-elemen di dalam grid */
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px; /* Memberi jarak antara kolom */
+}
+
+.column label {
+    margin-bottom: 5px;
     font-weight: bold;
 }
 
-/* Tambahkan styling untuk header text */
-.headerText {
-    font-family: 'Kalam', sans-serif;
-    font-size: 16px;
-    color: #000;
-    margin-left: 50px;
-}
-
-/* Container utama */
-.inputSection {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 20px;
-}
-
-/* ... CSS sebelumnya ... */
-
-/* ... CSS sebelumnya ... */
-
-/* Kolom Basic Information */
-.basicInformation {
-    display: flex;
-    width: 60%; /* Lebar untuk Basic Information */
-}
-
-/* Untuk membagi menjadi dua kolom */
-.column {
-    width: 50%;
-    box-sizing: border-box;
-    padding-right: 10px;
-}
-
-/* Gaya untuk input */
-.basicInformation input[type="text"] {
-    margin-bottom: 10px;
-    padding: 8px;
+.inputField {
+    margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    /* Gaya lainnya sesuai kebutuhan */
+    border-radius: 22px;
+    font-size: 16px;
+    width: 300px; 
+    height: 30px;
 }
 
-/* Kolom Detail Information Request */
-.detailInformation {
-    width: 100%;
-    margin-top: 20px;
-}
-
-.columnsWrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px; /* Sesuaikan dengan kebutuhan */
-}
-
-/* Setiap kolom */
-.column {
+.statusContainer {
+    grid-column: 2;
     display: flex;
     flex-direction: column;
-    width: calc(33.33% - 10px); /* Sesuaikan lebar kolom */
+    align-items: flex-end;
 }
 
-/* Field di atas tiga kolom */
-.detailInformation input[type="text"][placeholder="Field Atas Tengah"] {
-    /* Sesuaikan gaya input field di atas kolom */
-    margin-bottom: 10px; /* Atur spasi antara field dan kolom */
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    /* Gaya lainnya sesuai kebutuhan */
+.statusRequest {
+    width: 150px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 22px;
 }
 
-/* Field untuk setiap kolom */
-.detailInformation .column input[type="text"] {
-    margin-bottom: 10px; /* Atur spasi antar field */
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    /* Gaya lainnya sesuai kebutuhan */
+.draftField {
+    font-weight: bold;
+    width: 150px;
 }
 
-/* Media query untuk responsif */
-@media screen and (max-width: 768px) {
-    .headerBox {
-        width: 50%;
-    }
-
-    .backButton {
-        width: 100px;
-    }
-
-    .headerText {
-        font-size: 18px;
-        margin-left: 10px;
-    }
-
-    .basicInformation, .statusRequest {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
