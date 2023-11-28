@@ -37,12 +37,49 @@ const Submit = () => {
                         </div>
                     </div>
                 </div>
+
                 <div className={styles.statusContainer}>
                     <div className={styles.draftField}>
                         Status Request 
                     </div>
                     <div className={styles.statusRequest}>
                         Draft
+                    </div>
+                </div>
+                
+                <div className={styles.detailInformation}>
+                    <h2>Detail Information Request</h2>
+                    <input type="text" placeholder="Field Sebelum Kolom Pertama" className={styles.inputField} />
+                    <div className={styles.detailColumnsContainer}>
+                        {/* Kolom pertama */}
+                        <div className={styles.detailColumn}>
+                            <label>Field 1:</label>
+                            <input type="text" placeholder="Field 1" className={styles.inputField} />
+                            <label>Field 4:</label>
+                            <input type="text" placeholder="Field 4" className={styles.inputField} />
+                            <label>Field 7:</label>
+                            <input type="text" placeholder="Field 7" className={styles.inputField} />
+                        </div>
+                        
+                        {/* Kolom kedua */}
+                        <div className={styles.detailColumn}>
+                            <label>Field 2:</label>
+                            <input type="text" placeholder="Field 2" className={styles.inputField} />
+                            <label>Field 5:</label>
+                            <input type="text" placeholder="Field 5" className={styles.inputField} />
+                            <label>Field 8:</label>
+                            <input type="text" placeholder="Field 8" className={styles.inputField} />
+                        </div>
+                        
+                        {/* Kolom ketiga */}
+                        <div className={styles.detailColumn}>
+                            <label>Field 3:</label>
+                            <input type="text" placeholder="Field 3" className={styles.inputField} />
+                            <label>Field 6:</label>
+                            <input type="text" placeholder="Field 6" className={styles.inputField} />
+                            <label>Field 9:</label>
+                            <input type="text" placeholder="Field 9" className={styles.inputField} />
+                        </div>
                     </div>
                 </div>
             </div>

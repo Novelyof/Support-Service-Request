@@ -58,8 +58,8 @@
 
 /*----------------------------------------*/
 .content {
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 300px;
+    margin-right: 300px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -68,10 +68,12 @@
     width: 1500px;
     height: auto;
     background-color: #73B9F6;
+    border-radius: 22px;
 }
 
 .container {
     grid-column: 1;/* Menggunakan separuh dari lebar */
+    width: 500px;
     gap: 20px;
 }
 
@@ -98,14 +100,14 @@
 .columnsContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Menggunakan grid 2 kolom */
-    gap: 10px; /* Jarak antara elemen-elemen di dalam grid */
+    gap: 20px; /* Jarak antara elemen-elemen di dalam grid */
 }
 
 .column {
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin-right: 10px; /* Memberi jarak antara kolom */
+    margin-right: 5px; /* Memberi jarak antara kolom */
 }
 
 .column label {
@@ -115,15 +117,17 @@
 
 .inputField {
     margin-bottom: 20px;
+    padding: 4px 12px;
     border: 1px solid #ccc;
     border-radius: 22px;
     font-size: 16px;
-    width: 300px; 
+    width: 400px; 
     height: 30px;
 }
 
 .statusContainer {
     grid-column: 2;
+    width: 5px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -131,9 +135,14 @@
 
 .statusRequest {
     width: 150px;
+    height: 20px;
     padding: 10px;
     background-color: #f1f1f1;
     border-radius: 22px;
+    display: flex;
+    align-items: center; /* Mengatur konten secara vertikal di tengah */
+    justify-content: left; /* Mengatur konten secara horizontal di tengah */
+    text-align: center;
 }
 
 .draftField {
@@ -141,3 +150,23 @@
     width: 150px;
 }
 
+/*---------------------------------------------*/
+.detailInformation {
+    text-align: center;
+    flex-direction: column;
+}
+
+.inputBeforeFirstColumn {
+    margin-bottom: 20px; /* Atur jarak dari kolom */
+}
+
+.detailColumnsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membuat tiga grid untuk kolom */
+    gap: 20px; /* Jarak antar kolom */
+}
+
+.detailColumn {
+    display: flex;
+    flex-direction: column;
+}
